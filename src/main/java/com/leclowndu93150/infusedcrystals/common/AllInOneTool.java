@@ -28,13 +28,10 @@ public class AllInOneTool extends DiggerItem {
 
     public AllInOneTool(Tier tier) {
         super(
-/*            4.0f,
-            -2f,*/
                 tier,
-                Tags.Blocks.NEEDS_NETHERITE_TOOL,
+                Tags.Blocks.NEEDS_WOOD_TOOL,
                 new Properties()
-                        .durability(tier.getUses() * 4)
-
+                        .durability(tier.getUses() * 6)
         );
 
         this.tier = tier;
