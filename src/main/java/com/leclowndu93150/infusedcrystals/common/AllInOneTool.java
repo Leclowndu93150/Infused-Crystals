@@ -1,10 +1,8 @@
 package com.leclowndu93150.infusedcrystals.common;
 
 import net.minecraft.world.InteractionResult;
-import net.minecraft.world.item.DiggerItem;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
-import net.minecraft.world.item.Tier;
+import net.minecraft.world.item.*;
+import net.minecraft.world.item.component.ItemAttributeModifiers;
 import net.minecraft.world.item.context.UseOnContext;
 import net.neoforged.neoforge.common.ItemAbilities;
 import net.neoforged.neoforge.common.ItemAbility;
@@ -31,8 +29,9 @@ public class AllInOneTool extends DiggerItem {
                 tier,
                 Tags.Blocks.NEEDS_WOOD_TOOL,
                 new Properties()
-                        .durability(tier.getUses() * 6)
-        );
+                        .durability(tier.getUses() * 8).attributes(DiggerItem.createAttributes(tier, tier.getAttackDamageBonus(), tier.getSpeed())
+
+        ));
 
         this.tier = tier;
     }

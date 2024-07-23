@@ -1,0 +1,43 @@
+{
+  "item.infused_crystals.ironium_crystal": "Ironium Crystal",
+  "item.infused_crystals.coalium_crystal": "Coalium Crystal",
+  "item.infused_crystals.diamondium_crystal": "Diamondium Crystal",
+  "item.infused_crystals.emraldium_crystal": "Emraldium Crystal",
+  "item.infused_crystals.goldium_crystal": "Goldium Crystal",
+  "item.infused_crystals.lapisium_crystal": "Lapisium Crystal",
+  "item.infused_crystals.redstonium_crystal": "Redstonium Crystal",
+
+  "item.infused_crystals.infused_ironium_crystal": "Infused Ironium Crystal",
+  "item.infused_crystals.infused_coalium_crystal": "Infused Coalium Crystal",
+  "item.infused_crystals.infused_diamondium_crystal": "Infused Diamondium Crystal",
+  "item.infused_crystals.infused_emraldium_crystal": "Infused Emraldium Crystal",
+  "item.infused_crystals.infused_goldium_crystal": "Infused Goldium Crystal",
+  "item.infused_crystals.infused_lapisium_crystal": "Infused Lapisium Crystal",
+  "item.infused_crystals.infused_redstonium_crystal": "Infused Redstonium Crystal",
+
+  "item.infused_crystals.infused_ironium_aiot": "Infused Ironium AIOT",
+  "item.infused_crystals.infused_coalium_aiot": "Infused Coalium AIOT",
+  "item.infused_crystals.infused_diamondium_aiot": "Infused Diamondium AIOT",
+  "item.infused_crystals.infused_emraldium_aiot": "Infused Emraldium AIOT",
+  "item.infused_crystals.infused_goldium_aiot": "Infused Goldium AIOT",
+  "item.infused_crystals.infused_lapisium_aiot": "Infused Lapisium AIOT",
+  "item.infused_crystals.infused_redstonium_aiot": "Infused Redstonium AIOT",
+
+  "block.infused_crystals.ironium_block": "Ironium Block",
+  "block.infused_crystals.coalium_block": "Coalium Block",
+  "block.infused_crystals.diamondium_block": "Diamondium Block",
+  "block.infused_crystals.emraldium_block": "Emraldium Block",
+  "block.infused_crystals.goldium_block": "Goldium Block",
+  "block.infused_crystals.lapisium_block": "Lapisium Block",
+  "block.infused_crystals.redstonium_block": "Redstonium Block",
+
+  "block.infused_crystals.infused_ironium_block": "Infused Ironium Block",
+  "block.infused_crystals.infused_coalium_block": "Infused Coalium Block",
+  "block.infused_crystals.infused_diamondium_block": "Infused Diamondium Block",
+  "block.infused_crystals.infused_emraldium_block": "Infused Emraldium Block",
+  "block.infused_crystals.infused_goldium_block": "Infused Goldium Block",
+  "block.infused_crystals.infused_lapisium_block": "Infused Lapisium Block",
+  "block.infused_crystals.infused_redstonium_block": "Infused Redstonium Block"
+
+
+}
