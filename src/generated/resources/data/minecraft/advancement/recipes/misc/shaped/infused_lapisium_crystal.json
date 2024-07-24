@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_infused_lapisium_ingot": {
+      "conditions": {
+        "items": [
+          {
+            "items": "infused_crystals:infused_lapisium_crystal"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:shaped/infused_lapisium_crystal"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_infused_lapisium_ingot"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:shaped/infused_lapisium_crystal"
+    ]
+  }
+}

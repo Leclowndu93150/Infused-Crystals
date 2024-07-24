@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "infused_crystals:item/infused_redstonium_aiot"
+  }
+}

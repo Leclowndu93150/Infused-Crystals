@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_redstonium_block": {
+      "conditions": {
+        "items": [
+          {
+            "items": "infused_crystals:infused_redstonium_block"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:shaped/redstonium_aiot"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_redstonium_block"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:shaped/redstonium_aiot"
+    ]
+  }
+}

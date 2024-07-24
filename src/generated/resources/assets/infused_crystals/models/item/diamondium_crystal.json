@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "infused_crystals:item/diamondium_crystal"
+  }
+}

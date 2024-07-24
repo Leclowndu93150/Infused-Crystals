@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "infused_crystals:infused_emraldium_crystal"
+    },
+    "B": {
+      "item": "minecraft:stick"
+    },
+    "I": {
+      "item": "infused_crystals:infused_emraldium_block"
+    }
+  },
+  "pattern": [
+    "IAI",
+    "ABA",
+    " B "
+  ],
+  "result": {
+    "count": 1,
+    "id": "infused_crystals:infused_emraldium_aiot"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_diamondium_ingot": {
+      "conditions": {
+        "items": [
+          {
+            "items": "infused_crystals:diamondium_crystal"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:shaped/diamondium_crystal"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_diamondium_ingot"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:shaped/diamondium_crystal"
+    ]
+  }
+}
