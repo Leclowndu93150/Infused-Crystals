@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "infused_crystals:infused_goldium_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "infused_crystals:infused_goldium_crystal"
+  }
+}
