@@ -3,6 +3,7 @@ package com.leclowndu93150.infusedcrystals;
 import com.leclowndu93150.infusedcrystals.registry.BlockRegistry;
 import com.leclowndu93150.infusedcrystals.registry.CreativeTabRegistry;
 import com.leclowndu93150.infusedcrystals.registry.ItemRegistry;
+import com.leclowndu93150.infusedcrystals.registry.Tags;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.Mod;
@@ -18,6 +19,7 @@ public class InfusedCrystalsMain
         BlockRegistry.BLOCKS.register(modEventBus);
         ItemRegistry.ITEMS.register(modEventBus);
         CreativeTabRegistry.CREATIVE_MODE_TABS.register(modEventBus);
+        Tags.init();
     }
 
 }

@@ -16,9 +16,6 @@ import java.util.concurrent.CompletableFuture;
 
 @EventBusSubscriber(modid = "infused_crystals", bus = EventBusSubscriber.Bus.MOD)
 public class DataGatherer {
-    private static final String PATH_PREFIX = "textures/block";
-    private static final String PATH_SUFFIX = ".png";
-
     @SubscribeEvent
     public static void onGatherData(GatherDataEvent event) {
         DataGenerator generator = event.getGenerator();
@@ -31,5 +28,6 @@ public class DataGatherer {
         generator.addProvider(event.includeServer(), new LootTableProvider(output, Collections.emptySet(), List.of(
                 new LootTableProvider.SubProviderEntry(ICLootTableProvider::new, LootContextParamSets.BLOCK)
         ), lookupProvider));
+        generator.addProvider(event.includeServer(), new BlockTagsGenerator(output, lookupProvider, existingFileHelper));
     }
 }

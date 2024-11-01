@@ -1,20 +1,23 @@
 package com.leclowndu93150.infusedcrystals.common;
 
+import com.leclowndu93150.infusedcrystals.registry.Tags;
+import net.minecraft.core.component.DataComponents;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.entity.EquipmentSlotGroup;
+import net.minecraft.world.entity.ai.attributes.AttributeModifier;
+import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.item.*;
 import net.minecraft.world.item.component.ItemAttributeModifiers;
 import net.minecraft.world.item.context.UseOnContext;
 import net.neoforged.neoforge.common.ItemAbilities;
 import net.neoforged.neoforge.common.ItemAbility;
-import net.neoforged.neoforge.common.Tags;
 
 import javax.annotation.Nonnull;
 import java.util.List;
 
 public class AllInOneTool extends DiggerItem {
-    private final Tier tier;
 
-    private static List<ItemAbility> ACTIONS = List.of(
+    private static final List<ItemAbility> ACTIONS = List.of(
             ItemAbilities.AXE_DIG,
             ItemAbilities.HOE_DIG,
             ItemAbilities.PICKAXE_DIG,
@@ -25,15 +28,20 @@ public class AllInOneTool extends DiggerItem {
     );
 
     public AllInOneTool(Tier tier) {
-        super(
-                tier,
-                Tags.Blocks.NEEDS_WOOD_TOOL,
+        super(tier,
+                com.leclowndu93150.infusedcrystals.registry.Tags.Blocks.MINEABLE_WITH_AIO,
                 new Properties()
-                        .durability(tier.getUses() * 8).attributes(DiggerItem.createAttributes(tier, tier.getAttackDamageBonus(), tier.getSpeed())
+                        .durability(tier.getUses() * 4)
+                        .component(DataComponents.TOOL, tier.createToolProperties(Tags.Blocks.MINEABLE_WITH_AIO))
+                        .attributes(createAttributes())
+        );
+    }
 
-        ));
-
-        this.tier = tier;
+    private static ItemAttributeModifiers createAttributes() {
+        ItemAttributeModifiers.Builder builder = ItemAttributeModifiers.builder();
+        builder.add(Attributes.ATTACK_DAMAGE, new AttributeModifier(BASE_ATTACK_DAMAGE_ID,4.0f, AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.MAINHAND);
+        builder.add(Attributes.ATTACK_SPEED, new AttributeModifier(BASE_ATTACK_SPEED_ID, -2.0f, AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.MAINHAND);
+        return builder.build();
     }
 
     @Override
@@ -46,12 +54,10 @@ public class AllInOneTool extends DiggerItem {
     @Nonnull
     @Override
     public InteractionResult useOn(UseOnContext context) {
-        // How, no idea, possible, most likely :cry:
         if (context.getPlayer() == null) {
             return InteractionResult.FAIL;
         }
 
-        // Player not sneaking? Act as a Hoe to the block, else, Act as a shovel
         if (context.getPlayer().isCrouching()) {
             return Items.IRON_SHOVEL.useOn(context);
         }
@@ -60,10 +66,4 @@ public class AllInOneTool extends DiggerItem {
             return tmp;
         return Items.IRON_HOE.useOn(context);
     }
-
-/*    @Override //TODO help, enchantments are weird now.
-    public boolean canApplyAtEnchantingTable(ItemStack stack, Enchantment enchantment) {
-        return super.canApplyAtEnchantingTable(stack, enchantment) || enchantment.category.canEnchant(Items.DIAMOND_SWORD);
-    }*/
-
 }
